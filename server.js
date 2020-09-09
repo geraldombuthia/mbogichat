@@ -26,4 +26,4 @@ io.on('connection', socket => {
   })
 })
 //test
-server.listen(process.env.PORT || 3000)
+server.listen(3000)
