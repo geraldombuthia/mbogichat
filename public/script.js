@@ -4,8 +4,19 @@ const myPeer = new Peer(undefined, {
   path:"/peerjs",
   host: "/",
   port: "443",
-  secure: true
+  secure: true,
+  config: {
+    'iceServers': [
+        { url: 'stun:stun1.l.google.com:19302' },
+        {
+            url: 'turn:numb.viagenie.ca',
+            credential: 'muazkh',
+            username: 'webrtc@live.com'
+        }
+    ]
+}
 });
+
 const myVideo = document.createElement('video')
 myVideo.muted = true
 const peers = {}
