@@ -1,7 +1,8 @@
 const socket = io("/");
 const videoGrid = document.getElementById("video-grid");
 const myPeer = new Peer(undefined, {
-  host: "/mbogichat.herokuapp.com",
+  path:"/peerjs",
+  host: "/",
   port: "443",
   secure: true
 });
