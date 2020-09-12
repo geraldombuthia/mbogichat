@@ -1,21 +1,24 @@
+const Peer = require("peerjs");
+
 const socket = io("/");
 const videoGrid = document.getElementById("video-grid");
-const myPeer = new Peer(undefined, {
-  path:"/peerjs",
-  host: "/",
-  port: "443",
-  secure: true,
-  config: {
-    'iceServers': [
-        { url: 'stun:stun1.l.google.com:19302' },
-        {
-            url: 'turn:numb.viagenie.ca',
-            credential: 'muazkh',
-            username: 'webrtc@live.com'
-        }
-    ]
-}
-});
+// const myPeer = new Peer(undefined, {
+//   path:"/peerjs",
+//   // host: "/",
+//   port: "443",
+//   secure: true,
+//   config: {
+//     'iceServers': [
+//         { url: 'stun:stun1.l.google.com:19302' },
+//         {
+//             url: 'turn:numb.viagenie.ca',
+//             credential: 'muazkh',
+//             username: 'webrtc@live.com'
+//         }
+//     ]
+// }
+// });
+const peer = new Peer();
 
 const myVideo = document.createElement('video')
 myVideo.muted = true
