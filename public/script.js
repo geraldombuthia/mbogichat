@@ -18,7 +18,7 @@ const videoGrid = document.getElementById("video-grid");
 //     ]
 // }
 // });
-const peer = new Peer();
+const myPeer = new Peer();
 
 const myVideo = document.createElement('video')
 myVideo.muted = true
